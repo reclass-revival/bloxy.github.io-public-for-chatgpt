@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOXY - Sign Up</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e9f3fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .signup-card {
+      background: white;
+      width: 380px;
+      max-width: 92%;
+      padding: 32px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 3px 15px #00000015;
+    }
+
+    .logo {
+      color: #e52b35;
+      font-size: 43px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0;
+      border: 1px solid #c9c9c9;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #e52b35;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    a {
+      color: #e52b35;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 25px;
+      color: #888;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="signup-card">
+    <div class="logo">BLOXY</div>
+    <h2>Create an Account</h2>
+
+    <form id="signupForm">
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required minlength="8">
+      <input type="password" placeholder="Confirm Password" required minlength="8">
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="index.html">Log In</a></p>
+
+    <div class="footer">
+      © 2026 BLOXY. All Rights Reserved.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const passwords = this.querySelectorAll('input[type="password"]');
+
+      if (passwords[0].value !== passwords[1].value) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      alert("BLOXY registration is not connected yet!");
+    });
+  </script>
+</body>
+</html>
